@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  cache:
+    type: redis
+  redis:
+    host: 143.92.42.67
+    port: 6380
+    database: 4    #1库：运营平台  #2库：商户系统 #3库：支付网关 #4库： mid支付
+    timeout: 1000
+
+mall:
+  pay:
+    callback-url:
+    envs:
+      - env: yishi
+        base-url: https://api.it120.cc/yishi
+        users:
+          - mobile: 13459002230
+            pwd: qwer@1234
+          - mobile: 13863996738
+            pwd: qwer@1234
+          - mobile: 15041947847
+            pwd: qwer@1234
+          - mobile: 13818914556
+            pwd: qwer@1234
+          - mobile: 13891952138
+            pwd: qwer@1234
+          - mobile: 13554521399
+            pwd: qwer@1234
+          - mobile: 13426398086
+            pwd: qwer@1234
+          - mobile: 18810095809
+            pwd: qwer@1234
+      - env: rean
+        base-url: https://api.it120.cc/rean
+        users:
+          - mobile: 18601112994
+            pwd: qwer@1234
+
